@@ -16,7 +16,7 @@ fun WeatherScreen(context: Context) {
 
     if (weather != null) {
         Column {
-            Text(text = "Temperature: ${weather!!.main.temp}°C")
+            Text(text = "Temperature: ${weather!!.main.temp}°K")
             Text(text = "Condition: ${weather!!.weather[0].description}")
         }
     } else {
