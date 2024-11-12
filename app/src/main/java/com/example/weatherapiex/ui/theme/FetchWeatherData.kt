@@ -54,7 +54,7 @@ fun FetchWeatherData(
                                 coroutineScope.launch {
                                     try {
                                         val weatherResponse = WeatherRepository.getCurrentWeather(
-                                            newLocation.latitude, newLocation.longitude, "YOUR_API_KEY"
+                                            newLocation.latitude, newLocation.longitude, "d42aae37013c4b0d56a7b6c9b2e222d8"
                                         )
                                         onWeatherFetched(weatherResponse)
                                     } catch (e: Exception) {

@@ -15,8 +15,10 @@ fun WeatherScreen(context: Context) {
     }
 
     if (weather != null) {
+        val fahrenheitTemp = (weather!!.main.temp - 273.15) * 9/5 + 32
         Column {
-            Text(text = "Temperature: ${weather!!.main.temp}°K")
+            // Display temperature in Fahrenheit, formatted to 1 decimal place
+            Text(text = "Temperature: ${"%.1f".format(fahrenheitTemp)}°F")
             Text(text = "Condition: ${weather!!.weather[0].description}")
         }
     } else {
